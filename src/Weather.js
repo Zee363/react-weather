@@ -7,7 +7,7 @@ export default function Weather () {
     <div className="container">
       <form>
         <input type="text" placeholder="Search for a city.."/>
-        <input type="submit"/>
+        <input type="submit" className="btn btn-primary" />
       </form>
     <div className="Weather">
     <h1>Cape Town</h1>
