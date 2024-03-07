@@ -1,4 +1,40 @@
+.container {
+  background: white;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+body {
+  font-family: 'Roboto' sans-serif;
+}
 form {
   display: flex;
   justify-content: center;
+}
+
+#search-form-input {
+  background-color: RGB(226 218 231);
+  border: solid 1px RGB(226 218 231);
+  border-radius: 30px;
+  font-size: 17px;
+  height: 40px;
+  padding: 15px 20px;
+  width: 80%;
+}
+
+#search-form-button {
+  background-color: RGB(197 25 177);
+  margin-left: 3px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  padding: 13px 15px;
+  width: 13%;
+}
+
+.Weather li {
+  text-decoration: none;
 }
