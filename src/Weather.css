@@ -1,17 +1,15 @@
 .container {
   background: white;
   max-width: 600px;
-  margin: 40px auto;
+  margin: 30px auto;
   padding: 30px;
   border-radius: 20px;
 }
 
-body {
-  font-family: 'Roboto' sans-serif;
-}
 form {
   display: flex;
-  justify-content: center;
+  margin: 20px 0 0 0;
+  line-height: 20px;
 }
 
 #search-form-input {
@@ -20,8 +18,8 @@ form {
   border-radius: 30px;
   font-size: 17px;
   height: 40px;
-  padding: 15px 20px;
-  width: 80%;
+  padding: 15px 18px;
+  width: 75%;
 }
 
 #search-form-button {
@@ -35,6 +33,18 @@ form {
   width: 13%;
 }
 
+.Weather h1 {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: oblique;
+  font-size: x large;
+
+}
 .Weather li {
-  text-decoration: none;
+ list-style: none;
+}
+
+.Weather ul {
+  padding: 0;
+  margin: 0;
 }
