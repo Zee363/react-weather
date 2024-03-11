@@ -13,7 +13,8 @@ export default function Weather() {
         <h1>Cape Town</h1>
         <p>
           <light className="fs-1">
-            <em>29&deg;C</em> &#9728;
+            <span className="temperature"><strong>29</strong></span>
+              <span className="unit"><span/>&deg;C</span> &#9728;
           </light>
           <br />
           <hr />
