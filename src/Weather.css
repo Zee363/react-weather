@@ -40,6 +40,7 @@ form {
   font-size: x large;
 
 }
+
 .Weather li {
  list-style: none;
 }
@@ -48,15 +49,16 @@ form {
   padding: 0;
   margin: 0;
 }
- .Weather .temperature {
+
+.temperature {
   font-size: 56px;
 }
 
-.Weather .unit {
+.unit {
   font-size: 16px; 
   position: relative;
   top: -32px;
   margin-left: 5px;
   margin-top: 8px;
-  line-height: 4px;
+  line-height: -2;
 }
