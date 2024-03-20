@@ -1,25 +1,25 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import "./Weather";
 import "./Weather.css";
 import axios from "axios";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-   const [temperature, setTemperature] = useState("");
+  
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
-      date: new Date(response.data.dt *1000).toLocaleString(),
+      date: new Date(response.data.dt *1000),
       description: response.data.weather[0].description,
       iconUrl:
         `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
       humidity: response.data.main.humidity,
-      wind: response.data.main.wind,
+      wind: response.data.wind.speed,
       city: response.data.name,
     });
-    setTemperature(Math.round(response.data.main.temp));
   }
 
   if (weatherData.ready) {
@@ -44,7 +44,7 @@ export default function Weather(props) {
           <p>
             <light className="fs-1">
               <span className="temperature">
-                <strong>{weatherData.temperature}</strong>
+                <strong>{Math.round(weatherData.temperature)}</strong>
               </span>
               <span className="unit">
                 <span />
@@ -55,11 +55,13 @@ export default function Weather(props) {
             <br />
             <hr />
             <ul>
-              <li className="text-capitilize">
-                {weatherData.date}, {weatherData.description}
+              <li>
+                <FormattedDate date={weatherData.date} />
               </li>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind} km/h</li>
+              <li className="text-capitalize">{weatherData.description}
+                </li>
+            <li>Humidity: {weatherData.humidity}%</li>
+              <li>Wind: {weatherData.wind}km/h</li>
             </ul>
           </p>
           </div>
