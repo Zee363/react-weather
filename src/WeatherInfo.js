@@ -8,16 +8,15 @@ export default function WeatherInfo({ weatherData }) {
           <div className="weather-data">
           <h1>{weatherData.city}</h1>
           <p>
-            <light className="fs-1">
+            <span className="fs-1">
               <span className="temperature">
                 <strong>{Math.round(weatherData.temperature)}</strong>
               </span>
               <span className="unit">
-                <span />
                 &deg;C
               </span>{" "}
               <img src={weatherData.iconUrl} alt={weatherData.description} />
-            </light>
+            </span>
             <br />
             <hr />
             <ul>
