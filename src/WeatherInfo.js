@@ -9,15 +9,17 @@ export default function WeatherInfo({ weatherData }) {
           <div className="weather-data">
           <h1>{weatherData.city}</h1>
           <p>
+            <div className="weather-app-temperature-container">
             <span className="fs-1">
-              <span className="temperature">
+              <div className="temperature">
                 <strong>{Math.round(weatherData.temperature)}</strong>
-              </span>
-              <span className="unit">
+              </div>
+              <div className="unit">
                 &deg;C
-              </span>{" "}
+              </div>{" "}
               <img src={weatherData.iconUrl} alt={weatherData.description} />
             </span>
+            </div>
             <br />
             <hr />
             <ul>
@@ -26,8 +28,8 @@ export default function WeatherInfo({ weatherData }) {
               </li>
               <li className="text-capitalize">{weatherData.description}
                 </li>
-            <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind}km/h</li>
+            <li>Humidity:<strong> {weatherData.humidity}%</strong></li>
+              <li>Wind:<strong> {weatherData.wind}km/h</strong></li>
             </ul>
           </p>
           </div>

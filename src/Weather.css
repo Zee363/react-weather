@@ -38,7 +38,6 @@ form {
   font-weight: 400;
   font-style: oblique;
   font-size: x large;
-
 }
 
 .Weather li {
@@ -53,13 +52,23 @@ form {
 }
 
 .temperature {
-  font-size: 56px;
+  font-size: 88px;
+  font-weight: bold;
 }
 
+.weather-app-temperature-container{
+  display: flex;
+}
 .unit {
-  font-size: 16px; 
-  position: relative;
-  top: -34px;
-  font-weight: 400;
-  line-height: 1;
+  margin-top: 17px;
+  font-size: 28px;
+}
+
+.weather-data {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+li strong {
+  color: rebeccapurple;
 }
