@@ -5,12 +5,10 @@ import "./Weather.css";
 export default function WeatherInfo({ data }) {
   return (
     <div className="WeatherInfo">
-    <div className="Weather">
-          <div className="weather-data">
+      <div className="Weather">
           <h1>{data.city}</h1>
-          <p>
+          <p className="weather-data-list">
             <div className="weather-app-temperature-container">
-            <span className="fs-1">
               <div className="temperature">
                 <strong>{Math.round(data.temperature)}</strong>
               </div>
@@ -18,10 +16,7 @@ export default function WeatherInfo({ data }) {
                 &deg;C
               </div>{" "}
               <img src={data.iconUrl} alt={data.description} />
-            </span>
-            </div>
-            <br />
-            <hr />
+              </div>
             <ul>
               <li>
                 <FormattedDate date={data.date} />
@@ -29,11 +24,11 @@ export default function WeatherInfo({ data }) {
               <li className="text-capitalize">{data.description}
                 </li>
             <li>Humidity:<strong> {data.humidity}%</strong></li>
-              <li>Wind:<strong> {data.wind}km/h</strong></li>
+            <li>Wind:<strong>{data.wind}km/h</strong></li>
             </ul>
           </p>
           </div>
-        </div>
+        <hr />
       </div>
     );
   }

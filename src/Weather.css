@@ -35,15 +35,18 @@ form {
 
 .Weather h1 {
   font-family: "Roboto", serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: oblique;
   font-size: x large;
+  font-weight: 600;
+  text-align: start;
+  margin-top: 15px;
 }
 
 .Weather li {
- list-style: none;
- margin: 0;
- padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .Weather ul {
@@ -52,16 +55,18 @@ form {
 }
 
 .temperature {
-  font-size: 88px;
+  font-size: 58px;
   font-weight: bold;
 }
 
-.weather-app-temperature-container{
+.weather-app-temperature-container {
   display: flex;
+  justify-content: end;
+  justify-items: space-between;
 }
 .unit {
-  margin-top: 17px;
-  font-size: 28px;
+  margin-bottom: 27px;
+  font-size: 48px;
 }
 
 .weather-data {
@@ -71,4 +76,11 @@ form {
 
 li strong {
   color: rebeccapurple;
+}
+
+.weather-data-list {
+  text-align: start;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 20px;
 }
