@@ -37,21 +37,20 @@ form {
   font-family: "Roboto", serif;
   font-weight: 200;
   font-style: oblique;
-  font-size: x large;
   font-weight: 600;
-  text-align: start;
   margin-top: 15px;
 }
 
-.Weather li {
+li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.Weather ul {
+ul {
   padding: 0;
   margin: 0;
+  padding-left: 0! important;
 }
 
 .temperature {
@@ -59,13 +58,7 @@ form {
   font-weight: bold;
 }
 
-.weather-app-temperature-container {
-  display: flex;
-  justify-content: end;
-  justify-items: space-between;
-}
 .unit {
-  margin-bottom: 27px;
   font-size: 48px;
 }
 
@@ -80,7 +73,28 @@ li strong {
 
 .weather-data-list {
   text-align: start;
-  margin-bottom: 30px;
   font-size: 16px;
   line-height: 20px;
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 24px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+ul {
+  text-align: left;
+  margin-left: 1.7rem;
+}
+
+.weather-app-temperature-container {
+  display: flex;
+  justify-content: end;
+  justify-items: space-between;
 }
