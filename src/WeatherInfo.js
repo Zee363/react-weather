@@ -11,16 +11,18 @@ export default function WeatherInfo({ data }) {
         <div className="weather-data-list">
           <div className="weather-app-temperature-container">
             <div className="temperature">
+              <div>
+                <WeatherIcon code={data.iconUrl} alt={data.description} />
+                </div>
+
                   <strong>{Math.round(data.temperature)}</strong>
                   <div className="unit">&deg;C</div>{" "}
-                  <div className="float-left">
-                  <WeatherIcon code={data.icon} alt={data.description} />
+                  </div>
                 </div>
-                </div>
-                </div>
-                </div>
-            <p>
-              <ul>
+               </div>
+              </div>
+              <div>
+                <ul>
                   <li>
                     <FormattedDate date={data.date} />
                   </li>
@@ -30,11 +32,10 @@ export default function WeatherInfo({ data }) {
                   </li>
                   <li>
                     Wind:<strong>{data.wind}km/h</strong>
-                  </li>
-              </ul>
-            </p>
+                </li>
+            </ul>
+          </div>
+        <hr />
       </div>
-      <hr />
-    </div>
-  );
+   );
   }

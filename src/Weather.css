@@ -85,16 +85,10 @@ li strong {
 h1 {
   margin-left: 24px;
   margin-bottom: 0;
-  text-align: left;
+  text-align: center;
 }
 
 ul {
   text-align: left;
   margin-left: 1.7rem;
-}
-
-.weather-app-temperature-container {
-  display: flex;
-  justify-content: end;
-  justify-items: space-between;
 }
