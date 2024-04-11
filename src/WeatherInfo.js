@@ -26,7 +26,6 @@ export default function WeatherInfo({ data }) {
                   <li>
                     <FormattedDate date={data.date} />
                   </li>
-                  <li className="text-capitalize">{data.description}</li>
                   <li>
                     Humidity:<strong> {data.humidity}%</strong>
                   </li>
