@@ -1,17 +1,34 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
-export default function WeatherForecastDay(forecast) {
-return (
+export default function WeatherForecastDay(props) {
+function maxTemperature() {
+  let temperature = Math.round(props.data.temp.max);
+  return `${temperature}&deg;`;
+}
+
+function minTemperature() {
+  let temperature = Math.round(props.data.temp.min);
+  return `${temperature}&deg;`;
+}
+
+function day() {
+  let date = new Date(props.data.dt * 1000);
+  let day = date.getDay();
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+  return (
   <div>
-         <div className="weather-forecast-day">
-          {forecast[0].dt}
-          </div>
-          <WeatherIcon code={forecast[0].weather[0].icon} size={36}/>
+         <div className="weather-forecast-day">{day()}</div>
+          <WeatherIcon code={props.data.weather[0].icon} size={36} />
           <div className="weatherfocust-temperatures">
-            <span className="weatherfocust-temperatures-max">{forecast[0].temp.max}&deg;</span>
-            <span className="weatherfocust-temperatures-min">{forecast[0].temp.min}&deg;</span>
+            <span className="weatherfocust-temperatures-max">{maxTemperature()}</span>
+            <span className="weatherfocust-temperatures-min">{minTemperature()}&deg;</span>
         </div>
   </div>
-)
+ );
 }

@@ -17,7 +17,7 @@ function handleResponse(response) {
 }
 
 function load() {
-  let apiKey = "72268dd382d27883153725908f2fbf78";
+  let apiKey = "f5029b784306910c19746e40c14d6cd3";
   let longitude = props.coordinates.lon;
   let latitude = props.coordinates.lat;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
@@ -30,7 +30,7 @@ if (loaded) {
     <div className="weatherFocust">
     <div className="row">
       <div className="col">
-   <WeatherForecastDay data={forecast[0]} />
+   <WeatherForecastDay data={forecast} />
       </div>
     </div>
     </div>
