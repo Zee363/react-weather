@@ -3,7 +3,7 @@ import "./WeatherForecast.css";
 import WeatherForecastDay from "./WeatherForecastDay";
 import axios from "axios";
 
-export default function WeatherFocust(props) {
+export default function WeatherFocast(props) {
 let [loaded,setLoaded] = useState(false);
 let [forecast, setForecast] = useState(null);
 
@@ -27,18 +27,26 @@ function load() {
 
 if (loaded) {
   return (
-    <div className="weatherFocust">
+    <div className="weatherFocast">
     <div className="row">
-      <div className="col">
-   <WeatherForecastDay data={forecast} />
+      {forecast.map(function (dailyForecast, index) {
+        if (index < 5) {
+          return (
+      <div className="col" key={index}>
+   <WeatherForecastDay data={dailyForecast} />
       </div>
-    </div>
-    </div>
-  );
-
+    );
+    } else {
+      return null;
+    }
+  })}
+  </div>
+  </div>
+);
 } else {
   load();
 
   return null;
 }
 }
+ 

@@ -12,32 +12,32 @@ export default function WeatherInfo(props) {
         <div className="weather-data-list">
           <div className="weather-app-temperature-container">
             <div className="temperature">
-              <div>
-                <WeatherIcon code={props.iconUrl} alt={props.description} />
-                </div>
-
-                  <div>
-                    <WeatherTemperature celsius={props.data.temperature} />
-                  </div>
-                  </div>
-               </div>
+              <div className="float-left">
+                <WeatherIcon code={props.data.icon} alt={props.description} size={50} />
               </div>
-              <div>
-                <ul>
-                  <li>
-                    <FormattedDate date={props.data.date} />
-                  </li>
-                  <li className="text-capitalize">{props.data.description}</li>
-                  <li>
-                    Humidity:<strong> {props.humidity}%</strong>
-                  </li>
-                  <li>
-                    Wind:<strong>{props.wind}km/h</strong>
-                </li>
-            </ul>
+
+              <div className="float-left">
+                <WeatherTemperature celsius={props.data.temperature} />
+              </div>
+            </div>
           </div>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <FormattedDate date={props.data.date} />
+            </li>
+            <li className="text-capitalize">{props.data.description}</li>
+            <li>
+              Humidity:<strong> {props.data.humidity}%</strong>
+            </li>
+            <li>
+              Wind:<strong>{props.data.wind}km/h</strong>
+            </li>
+          </ul>
+        </div>
         <hr />
       </div>
     </div>
-   );
+  );
   }
