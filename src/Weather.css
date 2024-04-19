@@ -1,5 +1,5 @@
 .container {
-  background: white;
+  background-image: url(https://images.unsplash.com/photo-1514477917009-389c76a86b68?q=80&w=1367&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   max-width: 600px;
   margin: 30px auto;
   padding: 30px;
@@ -9,7 +9,6 @@
 form {
   display: flex;
   margin: 20px 0 0 0;
-  line-height: 20px;
 }
 
 #search-form-input {
@@ -60,11 +59,11 @@ ul {
 
 .unit {
   font-size: 48px;
+  margin-top: 8px;
 }
 
 .weather-data {
   font-size: 16px;
-  line-height: 20px;
 }
 
 li strong {
@@ -74,7 +73,6 @@ li strong {
 .weather-data-list {
   text-align: start;
   font-size: 16px;
-  line-height: 20px;
 }
 
 .temperature {
@@ -91,4 +89,26 @@ h1 {
 ul {
   text-align: left;
   margin-left: 1.7rem;
+}
+
+.WeatherTemperature-temperature {
+  display: flex;
+  justify-items: start;
+  justify-content: start; 
+}
+
+.weatherfocast-temperatures-max {
+  color: rebeccapurple;
+}
+
+.weatherfocast-temperatures-min {
+  opacity: 0.7;
+}
+
+.App a {
+  color: purple;
+}
+
+.App footer {
+  margin-bottom: 20px;
 }

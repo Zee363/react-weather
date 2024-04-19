@@ -11,14 +11,10 @@ export default function WeatherInfo(props) {
         <h1>{props.data.city}</h1>
         <div className="weather-data-list">
           <div className="weather-app-temperature-container">
-            <div className="temperature">
-              <div className="float-left">
-                <WeatherIcon code={props.data.icon} alt={props.description} size={50} />
-              </div>
-
-              <div className="float-left">
+            <div className="temperature d-flex align-items-center">
+               <WeatherIcon code={props.data.iconUrl} alt={props.description} size={50} />
+  
                 <WeatherTemperature celsius={props.data.temperature} />
-              </div>
             </div>
           </div>
         </div>
@@ -32,7 +28,7 @@ export default function WeatherInfo(props) {
               Humidity:<strong> {props.data.humidity}%</strong>
             </li>
             <li>
-              Wind:<strong>{props.data.wind}km/h</strong>
+              Wind:<strong> {props.data.wind}km/h</strong>
             </li>
           </ul>
         </div>
